@@ -56,10 +56,10 @@ bool canWalk(char button, int playerX, int playerY) {
 bool walk(char button, char vet[height][width], int *playerX, int *playerY) {
     vet[*playerX][*playerY] = ' ';
 
-    if (button == 'w') *playerX = *playerX - 1;
-    if (button == 's') *playerX = *playerX + 1;
-    if (button == 'a') *playerY = *playerY - 1;
-    if (button == 'd') *playerY = *playerY + 1;
+    if (button == 'w') (*playerX)--;
+    if (button == 's') (*playerX)++;
+    if (button == 'a') (*playerY)--;
+    if (button == 'd') (*playerY)++;
     
     bool win = vet[*playerX][*playerY] == 'O';
     
